@@ -9,6 +9,12 @@ class App extends Component {
     };
   }
 
+  changeDeadline() {
+    this.setState({
+      deadLine: this.state.newDeadline
+    })
+  }
+
   render() {
     return (
       <section className="App">
@@ -20,8 +26,8 @@ class App extends Component {
           <section className="seconds">20 seconds</section>
         </section>
         <section>
-          <input placeholder="new date" />
-          <button>Submit</button>
+          <input onChange={event => this.setState({newDeadline: event.target.value})} placeholder="new date" />
+          <button onClick={() => this.changeDeadline()}>Submit</button>
         </section>
       </section>
     )
