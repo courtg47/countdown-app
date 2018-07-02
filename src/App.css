@@ -1,7 +1,7 @@
 body {
-  background-color: #900C3F;
+  background-color: #900c3f;
   color: white;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* Main body of the app containing all components */
@@ -13,8 +13,7 @@ body {
 
 /* Main title of app containing Countdown and the default date */
 .app-title {
-  font-family: 'Shrikhand', cursive;
-  font-size: 60px;
+  font: 60px "Shrikhand", cursive;
   margin: 3%;
 }
 
@@ -22,7 +21,7 @@ body {
 .error {
   margin-bottom: 3%;
   font-size: 22px;
-  color: #F1E1E7;
+  color: #f1e1e7;
 }
 
 /* The components of the countdown clock: hours, days, minutes, and seconds */
@@ -47,19 +46,19 @@ body {
 
 /* Submit button */
 .submit {
-  background-color: #0C905D;
+  background-color: #0c905d;
   color: white;
   font-size: 18px;
   border-radius: 0;
-  border-color: #0C905D;
+  border-color: #0c905d;
 }
 
 .submit:hover,
 .submit:focus {
-  background-color: #096C46;
+  background-color: #096c46;
   color: white;
   outline: none;
-  border-color: #096C46;
+  border-color: #096c46;
   -webkit-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
