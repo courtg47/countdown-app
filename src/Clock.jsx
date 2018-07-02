@@ -8,7 +8,8 @@ class Clock extends Component {
       days: 0,
       hours: 0,
       minutes: 0,
-      seconds: 0
+      seconds: 0,
+      error: ""
     }
   }
 
@@ -24,20 +25,27 @@ class Clock extends Component {
     return num < 10 ? '0' + num : num;
   }
 
-  getTimeUntil(deadLine) {
+  getTimeUntil(deadLine, error) {
     const time = Date.parse(deadLine) - Date.parse(new Date());
     const seconds = Math.floor((time/1000) % 60);
     const minutes = Math.floor((time/1000/60) % 60);
     const hours = Math.floor(time/(1000 * 60 * 60) % 24);
     const days = Math.floor(time/(1000 * 60 * 60 * 24));
-    console.log(time);
+    console.log(minutes);
 
-    this.setState({days, hours, minutes, seconds});
+    if (minutes < 0) {
+      this.setState({error: "Please enter a date in the future."});
+      this.setState({days: 0, hours: 0, minutes: 0, seconds: 0});
+    } else {
+      this.setState({error: ""});
+      this.setState({days, hours, minutes, seconds});
+    }
   }
 
   render() {
     return (
       <section>
+        <section className="error">{this.state.error}</section>
         <section className="days">{this.leading0(this.state.days)} days</section>
         <section className="hours">{this.leading0(this.state.hours)} hours</section>
         <section className="minutes">{this.leading0(this.state.minutes)} minutes</section>
