@@ -29,8 +29,8 @@ class App extends Component {
         <h1 className="App-title">Countdown to {this.state.deadLine}</h1>
         <Clock deadLine={this.state.deadLine}/>
         <Form inline onSubmit={this.handleSubmit}>
-          <FormControl className="deadline-input" onChange={event => this.setState({newDeadline: event.target.value})} placeholder="new date" />
-          <Button onClick={() => this.changeDeadline()} onKeyUp={this.handleKeyUp}>Submit</Button>
+          <FormControl className="deadline-input" onChange={event => this.setState({newDeadline: event.target.value})} placeholder="New Date" />
+          <Button className="submit" onClick={() => this.changeDeadline()} onKeyUp={this.handleKeyUp}>Get New Countdown</Button>
         </Form>
       </section>
     )
