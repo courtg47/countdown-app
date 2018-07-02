@@ -31,9 +31,11 @@ class Clock extends Component {
     const minutes = Math.floor((time/1000/60) % 60);
     const hours = Math.floor(time/(1000 * 60 * 60) % 24);
     const days = Math.floor(time/(1000 * 60 * 60 * 24));
-    console.log(minutes);
 
-    if (minutes < 0) {
+    if (isNaN(time)) {
+      this.setState({error: "Please enter a valid date."});
+      this.setState({days: 0, hours: 0, minutes: 0, seconds: 0});
+    } else if (minutes < 0) {
       this.setState({error: "Please enter a date in the future."});
       this.setState({days: 0, hours: 0, minutes: 0, seconds: 0});
     } else {
