@@ -15,3 +15,8 @@
   display: inline;
   margin: 2%;
 }
+
+.deadline-input {
+  font-size: 25px;
+  margin: 3%;
+}
