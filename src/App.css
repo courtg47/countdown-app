@@ -4,24 +4,28 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.App {
+/* Main body of the app containing all components */
+.main-app {
   text-align: center;
   font-size: 27px;
   margin-top: 10%;
 }
 
-.App-title {
+/* Main title of app containing Countdown and the default date */
+.app-title {
   font-family: 'Shrikhand', cursive;
   font-size: 60px;
   margin: 3%;
 }
 
+/* Error message that displays on input error */
 .error {
   margin-bottom: 3%;
   font-size: 22px;
   color: #F1E1E7;
 }
 
+/* The components of the countdown clock: hours, days, minutes, and seconds */
 .hours,
 .days,
 .minutes,
@@ -30,6 +34,7 @@ body {
   margin: 2%;
 }
 
+/* Main input form in which the user enters a date */
 .deadline-input {
   font-size: 22px;
   width: 90%;
@@ -40,6 +45,7 @@ body {
           box-shadow: inset 3px 3px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* Submit button */
 .submit {
   background-color: #0C905D;
   color: white;

@@ -25,14 +25,14 @@ class App extends Component {
 
   render() {
     return (
-      <section className="App">
-        <h1 className="App-title">Countdown to {this.state.deadLine}</h1>
+      <main className="main-app">
+        <h1 className="app-title">Countdown to {this.state.deadLine}</h1>
         <Clock deadLine={this.state.deadLine}/>
         <Form inline onSubmit={this.handleSubmit}>
           <FormControl className="deadline-input" onChange={event => this.setState({newDeadline: event.target.value})} placeholder="New Date" />
           <Button className="submit" onClick={() => this.changeDeadline()} onKeyUp={this.handleKeyUp}>Get New Countdown</Button>
         </Form>
-      </section>
+      </main>
     )
   }
 }
